@@ -1,22 +1,14 @@
-import AbstractApi from './AbstractApi';
-import { AxiosPromise } from 'axios';
-import { get as _get } from 'lodash';
-import IBoatRamp from '../Model/IBoatRamp';
+import IBoatRamp, { IBoatRampOptional } from '../Model/IBoatRamp';
+import ContentApi from './ContentApi';
 
 /**
  * @since v1.0.0
  * Implemented by Kayo Chan <kayo@foxysun.com>
  */
 
-class BoatRampApi extends AbstractApi {
-  private readonly ENDPOINT: string = 'boat-ramp';
-
-  // --------------------------------------------------------------------------------------------
-  // Public methods
-  // --------------------------------------------------------------------------------------------
-
-  public getAllBoatRamps(): AxiosPromise<IBoatRamp[]> {
-    return this.http.get(this.ENDPOINT);
+class BoatRampApi extends ContentApi<IBoatRamp, IBoatRampOptional> {
+  public constructor(env: string, token?: string) {
+    super(env, 'boat-ramp', token);
   }
 }
 
