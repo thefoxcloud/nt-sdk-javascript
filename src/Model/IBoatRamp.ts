@@ -12,7 +12,7 @@ export default interface IBoatRamp {
   signOnly: boolean;
   parking: string;
   accessible: string;
-};
+}
 
 export interface IBoatRampOptional {
   id?: string;

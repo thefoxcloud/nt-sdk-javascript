@@ -1,6 +1,5 @@
 import Axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import Environment from '../Enum/Environment';
-import { TransformFunction } from '../Types/TransformFunction';
 
 abstract class AbstractApi {
 
@@ -18,9 +17,9 @@ abstract class AbstractApi {
   // Private Properties
   // --------------------------------------------------------------------------------------------
 
-  private readonly ENDPOINT_DEV: string = 'https://c9ec9cr93f.execute-api.us-east-1.amazonaws.com/dev';
+  private readonly ENDPOINT_DEV: string = 'https://h1xxjlr469.execute-api.us-east-1.amazonaws.com/dev';
   private readonly ENDPOINT_STAGING: string = 'https://cors-anywhere.herokuapp.com/http://13.251.129.57:8080';
-  private readonly ENDPOINT_LIVE: string = 'https://cors-anywhere.herokuapp.com/http://13.251.129.57:8080';
+  private readonly ENDPOINT_LIVE: string = 'https://h1xxjlr469.execute-api.us-east-1.amazonaws.com/dev';
   private readonly ENDPOINT_LOCAL: string = 'http://localhost:3002';
 
   // --------------------------------------------------------------------------------------------
@@ -30,7 +29,7 @@ abstract class AbstractApi {
   /**
    * @since v2.0.0
    */
-  public constructor(env: string, token?: string, transformResponse?: TransformFunction<{}>) {
+  public constructor(env: string, token?: string) {
     let baseUrl: string;
 
     switch (env) {
@@ -60,13 +59,6 @@ abstract class AbstractApi {
         headers: {
           Authorization: `Bearer ${token}`
         }
-      };
-    }
-
-    if (typeof transformResponse !== 'undefined') {
-      axiosConfig = {
-        ...axiosConfig,
-        transformResponse
       };
     }
 
