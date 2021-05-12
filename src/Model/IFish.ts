@@ -1,20 +1,17 @@
+import IMeta from "./IMeta";
+
 export default interface IFish {
   id: string;
   title: string;
   scientificName: string;
   category: string;
-  otherNames: string[];
   images: string[];
   regions: string[];
-  minimumSizeLimit: number;
-  possessionLimitPersonal: number;
+  minimumSizeLimit: string;
+  possessionLimitPersonal: string;
   riskLevel: string;
-  riskText: string;
-  livingArea: string;
-  sizeAndAge: string;
-  howToCatch: string;
-  howToCook: string;
   content: string;
+  meta: IMeta[];
 }
 
 export interface IFishOptional {
@@ -22,16 +19,11 @@ export interface IFishOptional {
   title?: string;
   scientificName?: string;
   category?: string;
-  otherNames?: string[];
   images?: string[];
   regions?: string[];
-  minimumSizeLimit?: number;
-  possessionLimitPersonal?: number;
+  minimumSizeLimit?: string;
+  possessionLimitPersonal?: string;
   riskLevel?: string;
-  riskText?: string;
-  livingArea?: string;
-  sizeAndAge?: string;
-  howToCatch?: string;
-  howToCook?: string;
   content?: string;
+  meta?: IMeta[];
 }
