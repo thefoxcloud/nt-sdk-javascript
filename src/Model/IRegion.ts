@@ -6,6 +6,7 @@ export default interface IRegion {
   address: string;
   geometry: IGeometry;
   placeId: string;
+  images: string[];
 }
 
 export interface IRegionOptional {
@@ -14,4 +15,5 @@ export interface IRegionOptional {
   address?: string;
   geometry?: IGeometry;
   placeId?: string;
+  images?: string[];
 }
