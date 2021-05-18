@@ -1,3 +1,5 @@
+import IMeta from './IMeta';
+
 export default interface IZone {
   id: string;
   title: string;
@@ -6,6 +8,7 @@ export default interface IZone {
   zoneType: string[];
   images: string[];
   content: string;
+  meta: IMeta[];
 }
 
 export interface IZoneOptional {
@@ -16,4 +19,5 @@ export interface IZoneOptional {
   zoneType?: string[];
   images?: string[];
   content?: string;
+  meta?: IMeta[];
 }
