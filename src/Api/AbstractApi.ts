@@ -21,6 +21,7 @@ abstract class AbstractApi {
   private readonly ENDPOINT_STAGING: string = 'https://cors-anywhere.herokuapp.com/http://13.251.129.57:8080';
   private readonly ENDPOINT_LIVE: string = 'https://h1xxjlr469.execute-api.us-east-1.amazonaws.com/dev';
   private readonly ENDPOINT_LOCAL: string = 'http://localhost:3002';
+  protected readonly baseUrl: string = '';
 
   // --------------------------------------------------------------------------------------------
   // Magic methods
@@ -49,8 +50,10 @@ abstract class AbstractApi {
         throw new Error(`Invalid env "${env}" value`);
     }
 
+    this.baseUrl = `${baseUrl}/`;
+
     let axiosConfig: AxiosRequestConfig = {
-      baseURL: `${baseUrl}/`
+      baseURL: this.baseUrl
     };
 
     if (typeof token !== 'undefined') {
