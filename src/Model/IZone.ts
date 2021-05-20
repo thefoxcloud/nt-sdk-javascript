@@ -6,7 +6,7 @@ export default interface IZone {
   title: string;
   regions: string[];
   kml: string[];
-  zoneType: string[];
+  zoneType: string;
   images: string[];
   content: string;
   meta: IMeta[];
@@ -18,7 +18,7 @@ export interface IZoneOptional {
   title?: string;
   regions?: string[];
   kml?: string[];
-  zoneType?: string[];
+  zoneType?: string;
   images?: string[];
   content?: string;
   meta?: IMeta[];
