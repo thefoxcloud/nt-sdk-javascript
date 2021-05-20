@@ -13,7 +13,7 @@ class ZoneApi extends ContentApi<IZone, IZoneOptional> {
   }
 
   public list(withCoordinates?: boolean): AxiosPromise<IZone[]> {
-    return this.http.get(this.endpoint, { params: withCoordinates === true ? 'true' : '' });
+    return this.http.get(this.endpoint, { params: { withCoordinates: withCoordinates === true ? 'true' : '' }});
   }
 }
 
