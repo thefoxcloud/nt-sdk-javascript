@@ -1,25 +1,24 @@
 import ICoordinate from './ICoordinate';
 import IMeta from './IMeta';
 
-export default interface IZone {
+export default interface IPoint {
   id: string;
   title: string;
   regions: string[];
-  kml: string[];
-  zoneType: string[];
+  location: ICoordinate;
   images: string[];
-  content: string;
   meta: IMeta[];
-  polygonPoints: ICoordinate[];
+  pointType: string;
+  description: string;
 }
 
-export interface IZoneOptional {
+export interface IPointOptional {
   id?: string;
   title?: string;
   regions?: string[];
-  kml?: string[];
-  zoneType?: string[];
+  location?: ICoordinate;
   images?: string[];
-  content?: string;
   meta?: IMeta[];
+  pointType?: string;
+  description?: string;
 }

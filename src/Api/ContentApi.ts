@@ -8,7 +8,7 @@ import IGeneralResponse from '../Model/IGeneralResponse';
  */
 
 class ContentApi<ResponseType, RequestType> extends AbstractApi {
-  private readonly endpoint: string = '';
+  protected readonly endpoint: string = '';
 
   public constructor(env: string, endpoint: string, token?: string) {
     super(env, token);
