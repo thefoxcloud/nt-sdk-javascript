@@ -22,3 +22,7 @@ export interface IPointOptional {
   pointType?: string;
   description?: string;
 }
+
+export interface IPointWithDisance extends IPoint {
+  distance: number;
+}

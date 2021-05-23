@@ -23,3 +23,7 @@ export interface IZoneOptional {
   content?: string;
   meta?: IMeta[];
 }
+
+export interface IZoneWithDistance extends IZone {
+  pointDistances: number[];
+}
