@@ -9,7 +9,7 @@ import ContentApi from './ContentApi';
 
 class PostApi extends ContentApi<IPost, IPostOptional> {
   public constructor(env: string, token?: string) {
-    super(env, 'zone', token);
+    super(env, 'post', token);
   }
 
   public list(category?: boolean): AxiosPromise<IPost[]> {
