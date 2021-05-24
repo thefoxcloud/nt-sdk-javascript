@@ -7,13 +7,13 @@ import ContentApi from './ContentApi';
  * Implemented by Kayo Chan <kayo@foxysun.com>
  */
 
-class PostApi extends ContentApi<IPost, IPostOptional> {
+ class PostApi extends ContentApi<IPost, IPostOptional> {
   public constructor(env: string, token?: string) {
     super(env, 'post', token);
   }
 
-  public list(category?: boolean): AxiosPromise<IPost[]> {
-    return this.http.get(this.endpoint, { params: { category: category === true ? 'true' : '' }});
+  public list(category?: string): AxiosPromise<IPost[]> {
+    return this.http.get(this.endpoint, { params: typeof category !== 'undefined' ? { category } : {}});
   }
 }
 
