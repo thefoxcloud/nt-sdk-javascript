@@ -10,6 +10,8 @@ export default interface IPoint {
   meta: IMeta[];
   pointType: string;
   description: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface IPointOptional {

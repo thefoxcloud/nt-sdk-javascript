@@ -12,6 +12,8 @@ export default interface IFish {
   riskLevel: string;
   content: string;
   meta: IMeta[];
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface IFishOptional {

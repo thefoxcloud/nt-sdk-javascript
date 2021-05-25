@@ -4,6 +4,8 @@ export default interface IPost {
   images: string[];
   category: string;
   content: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface IPostOptional {
