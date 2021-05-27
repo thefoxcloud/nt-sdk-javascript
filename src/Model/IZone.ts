@@ -11,6 +11,7 @@ export default interface IZone {
   content: string;
   meta: IMeta[];
   polygonPoints: ICoordinate[];
+  surroundingPolygonPoints: ICoordinate[];
   createdAt: string;
   updatedAt: string;
 }
