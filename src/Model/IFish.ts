@@ -1,4 +1,4 @@
-import IMeta from "./IMeta";
+import IMeta from './IMeta';
 
 export default interface IFish {
   id: string;

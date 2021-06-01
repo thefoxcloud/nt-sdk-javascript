@@ -7,7 +7,7 @@ import ContentApi from './ContentApi';
  * Implemented by Kayo Chan <kayo@foxysun.com>
  */
 
- class PostApi extends ContentApi<IPost, IPostOptional> {
+class PostApi extends ContentApi<IPost, IPostOptional> {
   public constructor(env: string, token?: string) {
     super(env, 'post', token);
   }
