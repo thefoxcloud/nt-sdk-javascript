@@ -1,5 +1,4 @@
 import DataResultType from '../Enum/DataResultType';
-
 export default interface ISearchResult {
   id: string;
   title: string;
