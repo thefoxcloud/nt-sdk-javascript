@@ -1,4 +1,5 @@
 import { AxiosPromise } from 'axios';
+import CategoryType from '../Enum/CategoryType';
 import IPost, { IPostOptional } from '../Model/IPost';
 import ContentApi from './ContentApi';
 
@@ -12,7 +13,7 @@ class PostApi extends ContentApi<IPost, IPostOptional> {
     super(env, 'post', token);
   }
 
-  public list(category?: string): AxiosPromise<IPost[]> {
+  public list(category?: CategoryType): AxiosPromise<IPost[]> {
     return this.http.get(this.endpoint, { params: typeof category !== 'undefined' ? { category } : {}});
   }
 }
