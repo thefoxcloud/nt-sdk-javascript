@@ -3,6 +3,7 @@ enum ZoneType {
   FishManagementZone = 'fish_management_zone',
   ReefProtectionArea = 'reef_protection_area',
   ShippingChannel = 'shipping_channel',
+  Region = 'fishing_region'
 }
 
 export default ZoneType;
