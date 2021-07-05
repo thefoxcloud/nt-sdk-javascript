@@ -14,6 +14,7 @@ export default interface IFish {
   meta: IMeta[];
   createdAt: string;
   updatedAt: string;
+  vesselLimit: IMeta[];
 }
 
 export interface IFishOptional {
@@ -28,4 +29,5 @@ export interface IFishOptional {
   riskLevel?: string;
   content?: string;
   meta?: IMeta[];
+  vesselLimit?: IMeta[];
 }
