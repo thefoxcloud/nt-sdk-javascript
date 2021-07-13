@@ -14,6 +14,7 @@ export default interface IZone {
   surroundingPolygonPoints: ICoordinate[];
   createdAt: string;
   updatedAt: string;
+  dateRange: string;
 }
 
 export interface IZoneOptional {
@@ -25,6 +26,7 @@ export interface IZoneOptional {
   images?: string[];
   content?: string;
   meta?: IMeta[];
+  dateRange?: string;
 }
 
 export interface IZoneWithDistance extends IZone {
