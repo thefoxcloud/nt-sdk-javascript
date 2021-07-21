@@ -24,7 +24,8 @@ class WeatherApi extends AbstractApi {
     return this.http.get(this.endpoint, {
       params: {
         lat: coordinate.lat,
-        lng: coordinate.lng
+        lng: coordinate.lng,
+        skipCache: true
       }
     });
   }
