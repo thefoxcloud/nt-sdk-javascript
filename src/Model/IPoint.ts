@@ -1,3 +1,4 @@
+import FishingLevel from '../Enum/FishingLevel';
 import ICoordinate from './ICoordinate';
 import IMeta from './IMeta';
 
@@ -12,6 +13,7 @@ export default interface IPoint {
   description: string;
   createdAt: string;
   updatedAt: string;
+  fishingLevel: FishingLevel;
 }
 
 export interface IPointOptional {

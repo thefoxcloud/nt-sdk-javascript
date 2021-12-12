@@ -1,3 +1,4 @@
+import FishingLevel from '../Enum/FishingLevel';
 import ICoordinate from './ICoordinate';
 import IMeta from './IMeta';
 
@@ -15,6 +16,7 @@ export default interface IZone {
   createdAt: string;
   updatedAt: string;
   dateRange: string;
+  fishingLevel: FishingLevel;
 }
 
 export interface IZoneOptional {
@@ -27,6 +29,7 @@ export interface IZoneOptional {
   content?: string;
   meta?: IMeta[];
   dateRange?: string;
+  fishingLevel?: FishingLevel;
 }
 
 export interface IZoneWithDistance extends IZone {
