@@ -7,6 +7,7 @@ export default interface IPost {
   icon: string;
   createdAt: string;
   updatedAt: string;
+  iconUrl: string;
 }
 
 export interface IPostOptional {
