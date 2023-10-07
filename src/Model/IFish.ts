@@ -15,6 +15,7 @@ export default interface IFish {
   createdAt: string;
   updatedAt: string;
   vesselLimit: IMeta[];
+  order?: number;
 }
 
 export interface IFishOptional {
@@ -30,4 +31,5 @@ export interface IFishOptional {
   content?: string;
   meta?: IMeta[];
   vesselLimit?: IMeta[];
+  order?: number;
 }
